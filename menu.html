@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[Restaurant Name] | Southern Soul Food</title>
+  <link href="style.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Nunito&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- NAVIGATION BAR -->
+    <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="ourstory.html">Our Story</a></li>
+        </ul>
+      </nav>
+
+<!-- MENU INFO-->
+      <section class="menu-page">
+        <h1>Our Menu</h1>
+        <div class="menu-tabs">
+          <button class="tab active" onclick="showMenu('dinein')">Dine-In</button>
+          <button class="tab" onclick="showMenu('catering')">Catering</button>
+        </div>
+      
+        <div id="dinein" class="menu-section">
+          <h2>Mains</h2>
+          <div class="menu-item">
+            <h3>Menu Item Name <span>$ Price</span></h3>
+            <p>Description</p>
+          </div>
+          <div class="menu-item">
+            <h3>Menu Item Name <span>$ Price</span></h3>
+            <p>Description</p>
+          </div>
+          <div class="menu-item">
+            <h3>Menu Item Name <span>$ Price</span></h3>
+            <p>Description</p>
+          </div>
+          <div class="menu-item">
+            <h3>Menu Item Name <span>$ Price</span></h3>
+            <p>Description</p>
+          </div>
+           <div class="menu-item">
+            <h3>Menu Item Name <span>$ Price</span></h3>
+            <p>Description</p>
+          </div>
+        </div>
+      
+        <div id="catering" class="menu-section hidden">
+          <h2>Catering Packages</h2>
+          <div class="menu-item">
+            <h3>Catering Option 1<span>$ Price</span></h3>
+            <p>Description</p>
+            <p>Serving Size</p>
+          </div>
+          <div class="menu-item">
+            <h3>Catering Option 2<span>$ Price</span></h3>
+            <p>Description</p>
+            <p>Serving Size</p>
+          </div>
+          <div class="menu-item">
+            <h3>Catering Option 3<span>$ Price</span></h3>
+            <p>Description</p>
+            <p>Serving Size</p>
+          </div>
+          <div class="menu-item">
+            <h3>Catering Option 4<span>$ Price</span></h3>
+            <p>Description</p>
+            <p>Serving Size</p>
+          </div>
+          <div class="menu-item">
+            <h3>Catering Option 5<span>$ Price</span></h3>
+            <p>Description</p>
+            <p>Serving Size</p>
+          </div>
+        </div>
+      </section>
+      
+<!--JAVASCRIPT FUNCTIONING FOR BUTTONS 'DINE-IN' AND 'CATERING' ON MENU PAGE -->
+<script>
+    function showMenu(menu) {
+      document.querySelectorAll('.menu-section').forEach(sec => sec.classList.add('hidden'));
+      document.getElementById(menu).classList.remove('hidden');
+      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+    </script>
+    
+  <footer>
+    <p>© 2025 [Restaurant Name]. All rights reserved.</p>
+  </footer>
+</body>
+</html>
